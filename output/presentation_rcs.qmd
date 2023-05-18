@@ -1,7 +1,7 @@
 ---
 title: "Leveraging a rolling cross-section design in panel studies to investigate police legitimacy"
 author: "Monica Gerber and Cristóbal Moya"
-institute: "London School of Economics and Political Science"
+institute: "<br> London School of Economics and Political Science"
 date: 2023-05-22
 format: 
   insper-revealjs:
@@ -12,45 +12,65 @@ lang: en
 
 ## Today
 
-1. Police legitimacy
+1. Motivation
 2. The rolling cross-section design
-    a. Expected vs unexpected events
-    b. Advantages and disadvantages
-    c. Assumptions
-    d. Examples
-3. Objetivo 3
+3. This Study: a rolling cross-section panel design
+4. Implementation challenges
 
 
-## Police legitimacy
+## Motivation
 
-- Police work requires public support to be able to function in a democratic context
-- Beliefs that the police act in **procedurally just** ways and are **legitimate** facilitate compliance and cooperation with authorities
-- A socially legitimate police force should require little violence to confront opposition
-- However, the world has seen many cases of **violent demonstrations**, **police violence** and **human rights violations**
+:::: {.columns}
+::: {.column}
+#### Panel studies
+- **Confirmatory** research
+- Individuals are interviewed at two or more points in time
+- Possible to make inferences about **changes** in attitudes or behaviours at the individual level 
 
-## Police legitimacy
-### The Chilean case
+<img src="C:/Users/Moni/Documents/GitHub/2023_presentation_rcs/output/images/panel.png"  height="100%" width="100%">
+::: 
 
-- Chile's main police force, the Carabineros, was among the most trusted institutions (Dammert, 2019)
-- Yet, recent **events of corruption** and **excessive use of force** during the social uprising in October 2019 have produced a serious loss of trust
-- **Crisis of legitimacy**: proposals of "deep reform" and even the dissolution of the institution
-- Need to understand relationship between police and citizens in Chile during the next crucial years
+::: {.column}
 
-## Police legitimacy
-### The Chilean case
+::: 
+::::
 
-- Probability-based online panel of the Chilean population (18-65 years old)
-- n = 5.300
+## Motivation
 
+:::: {.columns}
+::: {.column}
+#### Panel studies
+- **Confirmatory** research
+- Individuals are interviewed at two or more points in time
+- Possible to make inferences about **changes** in attitudes or behaviours at the individual level 
 
-## The rolling cross-section design 
+<img src="C:/Users/Moni/Documents/GitHub/2023_presentation_rcs/output/images/panel.png"  height="100%" width="100%">
+::: 
 
-- **Cross-section**: data obtained at a specific point in time
-    - Limited to correlational research
-- Causal inference needs to consider time as a factor (Kenski et al., 2010)
-- Rolling cross-sectional designs (RCS) distribute interviewing within a cross-section in a controlled (**random**) way over time (Johnston & Brady 2002; Kenski et al., 2010)
-    - Total sample is divided into multiple **replicates** (smaller random samples)
-    - Replicates are assigned to be interviewed at different intervals of times
+::: {.column}
+#### Rolling cross-sectional design (RCS)
+- **Exploratory** research
+- **Cross-section**: Data obtained at a specific point in time
+- **RCS**: distribute interviewing within a cross-section in a controlled (**random**) way over time
+
+<img src="C:/Users/Moni/Documents/GitHub/2023_presentation_rcs/output/images/rcs.png"  height="100%" width="100%">
+::: 
+::::
+
+## The rolling cross-section design
+### Unexpected event during survey design
+> Unexpected event during survey design (UESD): "research design that exploits the occurrence of an unexpected event during the fieldwork of a public opinion survey to estimate its causal effect on a relevant outcome by comparing responses of the individuals interviewed before the event $t_i<t_e$ (control group) to those of respondents interviewed after the event $t_i>t_e$ (treatment group)." (Muñoz et al., 2020, p. 187)
+
+- Effects of **naturally occuring** events that cannot be manipulated through controlled experiments (external validity)
+- Assumption that **interview time** is **independent** from the time when the **event** occurs
+
+## The rolling cross-section design
+### The "expected-unexpected" event during survey design
+- Temporal heterogeneity as an opportunity to move closer to **causal inference** (Johnston & Brady, 2002)
+- **Steps**:
+  - Total sample is divided into multiple **replicates** (smaller random samples)
+  - Replicates are assigned to be interviewed at different intervals of times
+- By itself it is not able to capture individual change
 
 ::: notes
 - Mostly used to electoral surveys
@@ -61,80 +81,125 @@ lang: en
 - Number of replicates depend on sample size goals and response rates
 - It's possible to release more replicates around time of particular interest
 - All replicates should be treated in the same way (consistent schedule, same nr. of re-contacting)
-:::
 
-## The rolling cross-section design
-
-:::: {.columns}
-::: {.column}
-#### Advantages
-- Time as an opportunity to move closer to causal inference
-- Can capture naturally-occuring expected and unexpected events
+Some advantages:
 - Avoids missatributing effects to the wrong events
 - Flexibility: information can be divided into different time periods for analysis
 - Little conditioning of participant responses
-:::
 
-::: {.column}
-#### Disadvantages
+Some disadvantages:
 - Not able to capture individual change
 - Small sample size to study individual days
 - Response rates may be lower do to strict protocols to release samples
-:::
+- Towards the end of an RCS study, new data may not be useful. Researcher wants to have each interval of time containing data with similar proportions of cases derived from first/second/third call attempts (same with beginning of RCS) 
 
-::::
-
-::: notes
 - When populations are studied across an extended period of time, it is assumed that no meaningful variation will take place within the sampling period. 
 - RCS takes advantage of temporal heterogeneity, it's converted into an object of study
 - While experiments are considered the best method for establishing causality, they do not consider realistic approaches 
 - Low sample sizes mean high sampling error. Method to alleviate problem is smoothing out the data lines with moving averages, pooling data across days. Noise from sampling error is reduced by capitalising on samples from nearby days (moving averages). However, when data is shifting, mixing values together from different days can mask the shift. Also, centered moving average will reflect a change before the change has actually occurred in the population. 
 :::
 
-## The rolling cross-section design
-### Expected vs unexpected events
-
-# The rolling cross-section design
-### Assumptions
-
-
-
 
 ## The rolling cross-section design
-### Example 1
+### Assumptions (1)
 
-<img src="C:/Users/Moni/Documents/GitHub/2023_presentation_rcs/output/images/iraq.png"  height="60%" width="60%">
-
-## The rolling cross-section design
-### Example 2
-
-<img src="C:/Users/Moni/Documents/GitHub/2023_presentation_rcs/output/images/women.png"  height="60%" width="60%">
-
-::: aside
-
-Figure from [Jiménez-Sánchez et al., 2022](https://allisonhorst.com)
-
-:::
-
-
-
-## The rolling cross-section design in the context of a panel design
-
-- **Panel studies**: individuals are interviewed at two or more points in time  
-    - Generally better than cross-sectional designs for causal inference (Kenski et al., 2010)
-    - Possible to make inferences about changes in attitudes or behaviours at the individual level (RCS by itself is not able to capture change)
+1. **Temporal ignorability**: *"for any individual, the potential outcomes must be independent from the moment of the interview"* (Muñoz et al., p. 189)
+  - Moment of the interview should be as *good as random*
+  - In RCS moment of interview *is* random
+  - Protocol to ensure equal procedures to contact and recontact sample units
+  - **Reachability**: ease of contact may vary between respondents
+  - **Attrition**: nonresponse may be correlated with potential outcomes
 
 ::: notes
-- Disadvantage of panel studies: expensive, mortality makes the study less generalizable.
-- Repeated interviewing may sensitize individuals to the concepts and methods of the study
-- Towards the end of an RCS study, new data may not be useful. Researcher wants to have each interval of time containing data with similar proportions of cases derived from first/second/third call attempts (same with beginning of RCS) 
+Assumptions under which unexpected events can yield valid causal estimates
+
+Ignorability: assignment to different values of time t should be independent from the potential outcomes of Y. 
+- Threats often arise from complex sampling designs. Primary sampling units are often contacted and interviewed sequentially. For example, in face-to-face surveys the fieldwork often follows a geographical pattern for efficiency reasons. 
+- Reachability: ease of contact and reluctance to participate can vary between respondents. In ESS there is a relationship between number of attempted contacts and how late they are interviewed during fieldwork. Therefore, the subjects who are more elusive and harder to reach will have a higher probability of being interviewed after any unexpected event. If reachability is correlated with the potential outcomes, its correlation with treatment assignment will bias the estimates of the causal effect. As expected, those who were older, less educated, and out of the labor market were interviewed earlier during the fieldwork of the ESS survey. This happened less so in RCS designs. 
+  - Should be less of a concern in RCS because day is random. If days overlap, in the long term the design should lead to equal numbers of first/second/third time respondents (Johnston and Brady, 2002).  
+- Attrition: Troublesome if nonresponse is triggered by the treatment. Being exposed to certain events might lead people to refrain from answering some questions or altogether. 
+
 :::
 
 
-## A rolling cross-section panel design
+## The rolling cross-section design
+### Assumptions (2)
+
+2. **Excludability**: *"any difference between respondents interviewed before and after the event shall be the sole consequence of the event"* (Muñoz et al., p. 189)
+  - Timing of the interview $t$ affects $Y$ only through event $T$
+  - Beware of collateral events, simultaneous events and unrelated time trends
+  - Need to characterize the event and its reactions
+
+::: notes
+Excludability
+- Collateral events: succession of reractions triggered by the unexpected event of interest. E.g. reactions to a terrorist attack might drive public opinion's response. Should be interpreted as the joint effect of the envent and the subsequent reactions
+- Simultaneous events: unrelated events that take place at the same time. Problem of compound treatments. Assumption that out of all the treatments that covary with the timing of the interview, the events of interest is the only treatment that affects the potential outcomes.
+- Unrelated time trends: presence of time-varying variables that, aside from the event itself, are systematically related to the outcome (temporal stability assumption). E.g. calendar effects
+
+The excludability assumption will be violated if the decision about the moment when the event occurs is endogenous to the outcome variable Y. 
+
+:::
+
+## The rolling cross-section design
+### Assumptions (3)
+
+3. **Compliance**: "some of the subjects were not really exposed to the event"Assignment to the treatment group $t_i>t_e$ was assumed to perfectly correspond to actually receiving treatment $T=1$." (Muñoz et al., 2020, p. 194)
+  - Need to measure compliance
+  
+
+## The rolling cross-section design
+### Example
+<center>
+<img src="C:/Users/Moni/Documents/GitHub/2023_presentation_rcs/output/images/women.png" height="50%" width="50%">
+</center>
+::: aside
+
+[Jiménez-Sánchez et al., 2022](https://academic.oup.com/poq/article/86/3/597/6697928)
+
+:::
+
+::: notes
+- Analyze how the public reacts to the International Women's Day in Spain 2019. 
+- Findins confirm that such hybrid media protest can broaden their audience, generate interest, spark conversations on gender inequality and contribute to opinion conformation.
+- Nationally representative telephone survey based on a rolling cross-sectional design through a daily tracking over 20 total days, before and after the protest day. Between 100 and 120 interviews were conducted each day
+- Quasi-experimental design: groups differ only in temporal exposure to the event. 
+- Respondents were divided into two groups, treated and not treated.
+
+:::
 
 
-### Panel 
 
-- the design
+## This Study
+### Police legitimacy
+
+- Police work requires public support to be able to function in a democratic context
+- Beliefs that the police act in **procedurally just** ways and are **legitimate** facilitate compliance and cooperation with authorities
+- A socially legitimate police force should require little violence to confront opposition
+- However, the world has seen many cases of **violent demonstrations**, **police violence** and **human rights violations**
+
+## This Study
+### The Chilean case
+
+- Chile's main police force, the Carabineros, was among the most trusted institutions (Dammert, 2019)
+- Yet, recent **events of corruption** and **excessive use of force** during the social uprising in October 2019 have produced a serious loss of trust
+- **Crisis of legitimacy**: proposals of "deep reform" and even the dissolution of the institution
+- Need to understand relationship between police and citizens in Chile during the next crucial years
+
+## This Study 
+### A rolling cross-section panel design
+
+- Probability-based online panel of the Chilean population (18-65 years old)
+- n = 5.300 in Contact Survey
+- 
+
+
+
+
+## Implementation challenges
+
+- Narrower bandwidths: 
+  - Will reduce N and statistical power
+  - Can reduce bias in the presence of collateral events or confounders correlated with time of the interview
+  - Can increase management costs
+- Interview window: for how long should respondents have the chance to complete the survey?
 
