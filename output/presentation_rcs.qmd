@@ -202,6 +202,14 @@ Some disadvantages:
 - **Crisis of legitimacy**: proposals of "deep reform" and even the dissolution of the institution
 - Need to understand relationship between police and citizens in Chile during the next crucial years
 
+## This Study
+### Aims
+
+- **Confirmatory**: 
+  - Track over time people's perceived police legitimacy and motivational postures towards the police, and examine their relationships with perceived procedural justice and fear of the police in Chile
+- **Exploratory**: 
+  - Determine the possible effects of the occurrence of different events (such as police violence, corruption scandals or reforms) on perceptions of legitimacy, procedural justice and fear of the police in Chile.
+
 ## This Study 
 ### A rolling cross-section panel design
 - **Probability-based online panel** of the Chilean population (18-65 years old)
