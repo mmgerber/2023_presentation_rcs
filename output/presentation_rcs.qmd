@@ -12,14 +12,13 @@ lang: en
 
 ```{r echo = F}
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
-
 ```
-
 
 
 ## Today
 
 1. Motivation
+1. 'Unexpected event during survey' design
 2. The rolling cross-section design
 3. This Study: a rolling cross-section panel design
 4. Implementation challenges
@@ -27,69 +26,53 @@ knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 
 ## Motivation
 
-:::: {.columns}
+::: {.columns}
 ::: {.column}
-#### Panel studies
-- **Confirmatory** research
-- Individuals are interviewed at two or more points in time
-- Possible to make inferences about **changes** in attitudes or behaviours at the individual level 
+#### Confirmatory research
+- Inferences about **changes** in police legitimacy
+- **Panel study**
+  - Interview individuals at two or more points in time
 
-<img src="images/panel.png"  height="100%" width="100%">
+![](images/panel.png)
 ::: 
 
 ::: {.column}
+::: {.fragment}
+#### Exploratory research
 
+- Unexpected events relevant to police legitimacy
+- **Rolling cross-sectional design** (RCS)
+  - Randomized controlled interviewing over time
+
+![](images/rcs.png)
 ::: 
-::::
+:::
+:::
 
 
 ::: notes
 - Panel studies cannot examine short-term variability of events, since time intervals between waves are usually much larger
-:::
-
-## Motivation
-
-:::: {.columns}
-::: {.column}
-#### Panel studies
-- **Confirmatory** research
-- Individuals are interviewed at two or more points in time
-- Possible to make inferences about **changes** in attitudes or behaviours at the individual level 
-
-<img src="images/panel.png"  height="100%" width="100%">
-::: 
-
-::: {.column}
-#### Rolling cross-sectional design (RCS)
-- **Exploratory** research
-- **RCS**: distribute interviewing within a cross-section in a controlled (**random**) way over time
-- Capture potential impact of unexpected events
-
-<img src="images/rcs.png"  height="100%" width="100%">
-::: 
-::::
-
-::: notes
 - RCS spread a conventional cross-sectional design over a certain period of time, distributing the interviews in a strictly controlled way.
 - RCS have been utilised to study the effect of electoral campaigns on voting attitudes and behaviours
 - RCS by itself cannot study change in individuals
 :::
 
-## Unexpected event during survey design
+## 'Unexpected event during survey' design
 
 > "research design that exploits the occurrence of an unexpected event during the fieldwork of a public opinion survey to estimate its causal effect on a relevant outcome by comparing responses of the individuals interviewed before the event $t_i<t_e$ (control group) to those of respondents interviewed after the event $t_i>t_e$ (treatment group)." (Muñoz et al., 2020, p. 187)
 
-- **Quasi-experiment**: Effects of **naturally occuring** events that cannot be manipulated through controlled experiments 
+- **Quasi-experiment**: Effects of **naturally occurring** events that cannot be manipulated through controlled experiments 
 - Assumption that **interview time** is **independent** from the time when the **event** occurs
 
 ::: notes
 - Higher external validity
 - While experiments are considered the best method for establishing causality, they do not consider realistic approaches 
-
 :::
 
-## The rolling cross-section design
+## The RCS design
+
 ### The "expected-unexpected" event during survey design
+
 > "the design is just a standard cross-section, but the day on which a respondent is interviewed is chosen randomly" (Johnston & Brady, 2022, p. 283)
 
 > "The data collected in an RCS allow a fine-grained analysis of dynamic phenomena of public opinion" (Lutz et al., 2013, p. 3)
@@ -112,13 +95,15 @@ Some disadvantages:
 
 :::
 
-## The rolling cross-section design
+## The RCS design
 ### The "expected-unexpected" event during survey design
-- **Steps** (Kenski et al., 2010):
-  1. Total **number of interviews** is established
-  2. Total sample is divided into multiple **replicates** (smaller random samples)
-  3. Replicates are assigned to be interviewed at **different intervals of times**
-  4. All replicates are treated in the same way (**protocol**)
+
+**Steps** (Kenski et al., 2010):
+
+1. Total **number of interviews** is established
+2. Full sample is **randomly divided** into multiple **replicates**
+3. Replicates assigned to be interviewed at **different intervals of times**
+4. The same **protocol** is followed for all replicates
 
 ## The rolling cross-section design
 ### Example
@@ -133,13 +118,20 @@ Some disadvantages:
 
 ::: notes
 - Analyze how the public reacts to the International Women's Day in Spain 2019. 
-- Nationally representative telephone survey based on a rolling cross-sectional design through a daily tracking over 20 total days, before and after the protest day. Between 100 and 120 interviews were conducted each day
+- Nationally representative telephone survey based on a RCS design through a daily tracking over 20 total days, before and after the protest day. Between 100 and 120 interviews were conducted each day
 - Respondents were divided into two groups, treated and not treated.
 - Findings confirm that such hybrid media protest can broaden their audience, generate interest, spark conversations on gender inequality and contribute to opinion conformation.
 :::
 
+## The RCS design
+### Assumptions
+1. **Temporal ignorability**: Moment of the interview should be as *good as random*
 
-## The rolling cross-section design
+2. **Excludability**: Timing of the interview $t$ affects $Y$ only through event $T$
+
+3. **Compliance**: assignment to the treatment ($t_i>t_e$) corresponds to actually receiving treatment ($T=1$)
+
+## The RCS design
 ### Assumptions
 
 1. **Temporal ignorability**: "for any individual, the potential outcomes must be independent from the moment of the interview" (Muñoz et al., p. 189)
@@ -160,7 +152,7 @@ Some disadvantages:
 :::
 
 
-## The rolling cross-section design
+## The RCS design
 ### Assumptions
 
 2. **Excludability**: "any difference between respondents interviewed before and after the event shall be the sole consequence of the event" (Muñoz et al., p. 189)
@@ -175,12 +167,11 @@ Some disadvantages:
 - **Unrelated time trends**: presence of time-varying variables that, aside from the event itself, are systematically related to the outcome (temporal stability assumption). E.g. calendar effects
 :::
 
-## The rolling cross-section design
+## The RCS design
 ### Assumptions
 
 3. **Compliance**: "Assignment to the treatment group $t_i>t_e$ was assumed to perfectly correspond to actually receiving treatment $T=1$." (Muñoz et al., 2020, p. 194)
   - Need to measure compliance
-
 
 :::notes
 - Some of the subjects were not really exposed to the event
@@ -208,47 +199,34 @@ Some disadvantages:
 - **Confirmatory**: 
   - Track over time people's perceived police legitimacy and motivational postures towards the police, and examine their relationships with perceived procedural justice and fear of the police in Chile
 - **Exploratory**: 
-  - Determine the possible effects of the occurrence of different events (such as police violence, corruption scandals or reforms) on perceptions of legitimacy, procedural justice and fear of the police in Chile.
+  - Determine the effects of potential unexpected events (such as police violence, corruption scandals or reforms) on perceptions of legitimacy, procedural justice and fear of the police in Chile.
 
 ## This Study 
-### A rolling cross-section panel design
-- **Probability-based online panel** of the Chilean population (18-65 years old)
+### A RCS panel design
+- **Probability-based online panel** of the population in Chile (18-65 years old)
 - Panel study with **10 waves**
+- Face-to-face recruitment with probability-based sampling design
 - Sample size
-  - Expected sample in contact survey: n = 5.300 
-  - Expected sample in Wave 1: n = 1.500 
+  - Expected sample in contact survey: n = 5,300 
+  - Expected sample in Wave 1: n = 1,500 
 - Possibility to combine with non-probabilistic sample to increase sample size
 
 ## This Study 
-### A rolling cross-section panel design
-<br>
-<center>
-<img src="images/nested1.png" height="35%" width="35%">
-</center>
-
-## This Study 
-### A rolling cross-section panel design
+### A RCS panel design
 <br>
 <center>
 <img src="images/nested2.png" height="35%" width="35%">
 </center>
 
 ## This Study 
-### A rolling cross-section panel design
-<br>
-<center>
-<img src="images/nested3.png" height="35%" width="35%">
-</center>
-
-## This Study 
-### A rolling cross-section panel design
+### A RCS panel design
 <br>
 <center>
 <img src="images/nested4.png" height="35%" width="35%">
 </center>
 
 ## This Study 
-### A rolling cross-section panel design
+### A RCS panel design
 <br>
 <center>
 <img src="images/nested5.png" height="35%" width="35%">
@@ -260,12 +238,22 @@ Some disadvantages:
 :::
 
 ## This Study 
-### A rolling cross-section panel design
 
-Simulación Cristóbal
+### Identify unexpected event with RCS design
 
+![](images/f_w_wave_b.png)
 
+## This Study 
 
+### Identify unexpected event with panel design
+
+![](images/f_b_waves_bc.png)
+
+## This Study 
+
+### Identify unexpected events with RCS panel design
+
+![](images/f_ewb.png)
 
 ## This Study 
 ### Implementation challenges
@@ -296,6 +284,7 @@ Simulación Cristóbal
 
 ## Thank you!
 
-- Contact: 
-  - Monica Gerber (monica.gerber@udp.cl)
-  - Cristóbal Moya (x)
+Contact: 
+
+- Monica Gerber [monica.gerber@udp.cl](mailto:monica.gerber@udp.cl)
+- Cristóbal Moya [cristoba.moya@uni-bielefeld.de](mailto:cristoba.moya@uni-bielefeld.de)
