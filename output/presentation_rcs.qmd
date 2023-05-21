@@ -71,28 +71,27 @@ knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 
 ## Unexpected police-related events
 
-<img src="images/eventos1.png" height="100%" width="100%">
+![](images/eventos1.PNG)
 
 ## Unexpected police-related events
 
-<img src="images/eventos2.png" height="100%" width="100%">
+![](images/eventos2.PNG)
 
 ## Unexpected police-related events
 
-<img src="images/eventos3.png" height="100%" width="100%">
+![](images/eventos3.PNG)
 
 ## Unexpected police-related events
 
-<img src="images/eventos4.png" height="100%" width="100%">
+![](images/eventos4.PNG)
 
 ## Unexpected police-related events
 
-<img src="images/eventos5.png" height="100%" width="100%">
+![](images/eventos5.PNG)
 
 ## Unexpected police-related events
 
-<img src="images/eventos6.png" height="100%" width="100%">
-
+![](images/eventos6.PNG)
 
 ## The RCS design
 
@@ -130,7 +129,7 @@ Some disadvantages:
 3. Replicates assigned to be interviewed at **different intervals of times**
 4. The same **protocol** is followed for all replicates
 
-## The rolling cross-section design
+## The RCS design
 ### Example
 <center>
 <img src="images/women.png" height="50%" width="50%">
@@ -285,6 +284,36 @@ Some disadvantages:
 ## This Study 
 ### Implementation challenges
 <br>
+
+```{r}
+#| echo: false
+library(gt)
+
+t <- tibble::tribble(
+       ~V1,  ~V2,   ~V3,  ~V4, ~V5, ~V6,
+   "Day 4", 129L, 1329L, 0.58,   1,   1,
+   "Day 7", 257L, 1200L, 0.83,   1,   1,
+  "Day 10", 386L, 1071L, 0.92,   1,   1,
+  "Day 13", 514L,  943L, 0.95,   1,   1,
+  "Day 17", 686L,  771L, 0.97,   1,   1
+  )
+
+gt(t) |> 
+  cols_label(
+    V1 = "Event happens on...",
+    V2 = "Not treated",
+    V3 = "Treated",
+    V4 = "Small effect",
+    V5 = "Medium effect",
+    V6 = "Large effect") |> 
+  tab_spanner(label = "Power", columns = V4:V6) |> 
+  tab_spanner(label = "Event", columns = V2:V3) |> 
+  fmt_number(columns = V5:V6, decimals = 2) 
+```
+
+## This Study 
+### Implementation challenges
+
 <center>
 <img src="images/decisions.png" height="60%" width="60%">
 </center>
@@ -299,15 +328,7 @@ Some disadvantages:
   - Once the first round of replicates have been completed, any given day will be composed of approximately the samel percentaje of first/second/third-call-attempt numbers.
   - Data collected at the beginning of the survey should be used with caution as they may contain higher % of first-time-call attempts
 
-
 :::
-
-## This Study 
-### Implementation challenges
-<br>
-<center>
-<img src="images/power.png" height="100%" width="100%">
-</center>
 
 ## Thank you!
 
