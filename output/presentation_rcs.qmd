@@ -69,9 +69,34 @@ knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 - While experiments are considered the best method for establishing causality, they do not consider realistic approaches 
 :::
 
+## Unexpected police-related events
+
+<img src="images/eventos1.png" height="100%" width="100%">
+
+## Unexpected police-related events
+
+<img src="images/eventos2.png" height="100%" width="100%">
+
+## Unexpected police-related events
+
+<img src="images/eventos3.png" height="100%" width="100%">
+
+## Unexpected police-related events
+
+<img src="images/eventos4.png" height="100%" width="100%">
+
+## Unexpected police-related events
+
+<img src="images/eventos5.png" height="100%" width="100%">
+
+## Unexpected police-related events
+
+<img src="images/eventos6.png" height="100%" width="100%">
+
+
 ## The RCS design
 
-### The "expected-unexpected" event during survey design
+### An 'expected-unexpected' event during survey design
 
 > "the design is just a standard cross-section, but the day on which a respondent is interviewed is chosen randomly" (Johnston & Brady, 2022, p. 283)
 
@@ -97,7 +122,7 @@ Some disadvantages:
 
 ## The RCS design
 ### The "expected-unexpected" event during survey design
-
+<br>
 **Steps** (Kenski et al., 2010):
 
 1. Total **number of interviews** is established
@@ -125,22 +150,20 @@ Some disadvantages:
 
 ## The RCS design
 ### Assumptions
+<br>
 1. **Temporal ignorability**: Moment of the interview should be as *good as random*
 
 2. **Excludability**: Timing of the interview $t$ affects $Y$ only through event $T$
 
 3. **Compliance**: assignment to the treatment ($t_i>t_e$) corresponds to actually receiving treatment ($T=1$)
 
-## The RCS design
-### Assumptions
-
+::: notes
 1. **Temporal ignorability**: "for any individual, the potential outcomes must be independent from the moment of the interview" (Muñoz et al., p. 189)
   - Moment of the interview should be as *good as random*
   - In RCS moment of interview *is* random
   - Protocol to ensure equal procedures to contact and recontact sample units
   - Need to compare 'treated' and 'not-treated' in terms of ease of contact and socio-demographics (Lutz et al., 2013)
 
-::: notes
 - Assumptions under which unexpected events can yield valid causal estimates
 - Assignment to different values of time t should be independent from the potential outcomes of Y. 
 - The daily samples need to fulfill two compelling properties: (1) They must consist of a somewhat stable mix of respondents that are easy and such that are harder to reach. (2) The socio-demographic characteristics of their members must not vary significantly over the course of the campaign.(Lutz et al., 2013)
@@ -149,66 +172,70 @@ Some disadvantages:
   - Should be less of a concern in RCS because day is random. If days overlap, in the long term the design should lead to equal numbers of first/second/third time respondents (Johnston and Brady, 2002).  
 - **Attrition**: Troublesome if nonresponse is triggered by the treatment. Being exposed to certain events might lead people to refrain from answering some questions or altogether. 
 
-:::
-
-
-## The RCS design
-### Assumptions
-
 2. **Excludability**: "any difference between respondents interviewed before and after the event shall be the sole consequence of the event" (Muñoz et al., p. 189)
   - Timing of the interview $t$ affects $Y$ only through event $T$
   - Beware of collateral events, simultaneous events and unrelated time trends
   - Need to characterize the event and its reactions
 
-::: notes
 - The excludability assumption will be violated if the decision about the moment when the event occurs is endogenous to the outcome variable Y. 
 - **Collateral events**: succession of reactions triggered by the unexpected event of interest. E.g. reactions to a terrorist attack might drive public opinion's response. Should be interpreted as the joint effect of the envent and the subsequent reactions
 - **Simultaneous events**: unrelated events that take place at the same time. Problem of compound treatments. Assumption that out of all the treatments that covary with the timing of the interview, the events of interest is the only treatment that affects the potential outcomes.
 - **Unrelated time trends**: presence of time-varying variables that, aside from the event itself, are systematically related to the outcome (temporal stability assumption). E.g. calendar effects
-:::
-
-## The RCS design
-### Assumptions
 
 3. **Compliance**: "Assignment to the treatment group $t_i>t_e$ was assumed to perfectly correspond to actually receiving treatment $T=1$." (Muñoz et al., 2020, p. 194)
   - Need to measure compliance
 
-:::notes
 - Some of the subjects were not really exposed to the event
 :::
 
 ## This Study
 ### Police legitimacy
+<br>
 
 - Police work requires public support to be able to function in a democratic context
+
 - Beliefs that the police act in **procedurally just** ways and are **legitimate** facilitate compliance and cooperation with authorities
+
 - A socially legitimate police force should require little violence to confront opposition
+
 - However, the world has seen many cases of **violent demonstrations**, **police violence** and **human rights violations**
 
 ## This Study
 ### The Chilean case
+<br>
 
 - Chile's main police force, the Carabineros, was among the most trusted institutions (Dammert, 2019)
+
 - Yet, recent **events of corruption** and **excessive use of force** during the social uprising in October 2019 have produced a serious loss of trust (Gerber et al., 2023)
+
 - **Crisis of legitimacy**: proposals of "deep reform" and even the dissolution of the institution
+
 - Need to understand relationship between police and citizens in Chile during the next crucial years
 
 ## This Study
 ### Aims
+<br>
 
 - **Confirmatory**: 
   - Track over time people's perceived police legitimacy and motivational postures towards the police, and examine their relationships with perceived procedural justice and fear of the police in Chile
+
 - **Exploratory**: 
   - Determine the effects of potential unexpected events (such as police violence, corruption scandals or reforms) on perceptions of legitimacy, procedural justice and fear of the police in Chile.
 
 ## This Study 
 ### A RCS panel design
+<br>
+
 - **Probability-based online panel** of the population in Chile (18-65 years old)
+
 - Panel study with **10 waves**
+
 - Face-to-face recruitment with probability-based sampling design
-- Sample size
+
+- **Sample size**
   - Expected sample in contact survey: n = 5,300 
   - Expected sample in Wave 1: n = 1,500 
+
 - Possibility to combine with non-probabilistic sample to increase sample size
 
 ## This Study 
@@ -259,7 +286,7 @@ Some disadvantages:
 ### Implementation challenges
 <br>
 <center>
-<img src="images/decisions.png" height="70%" width="70%">
+<img src="images/decisions.png" height="60%" width="60%">
 </center>
 
 
@@ -279,7 +306,7 @@ Some disadvantages:
 ### Implementation challenges
 <br>
 <center>
-<img src="images/power.png" height="70%" width="70%">
+<img src="images/power.png" height="100%" width="100%">
 </center>
 
 ## Thank you!
