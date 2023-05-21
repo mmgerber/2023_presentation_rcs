@@ -121,7 +121,7 @@ Some disadvantages:
 :::
 
 ## The RCS design
-### The "expected-unexpected" event during survey design
+### The 'expected-unexpected' event during survey design
 <br>
 **Steps** (Kenski et al., 2010):
 
