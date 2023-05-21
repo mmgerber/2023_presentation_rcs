@@ -281,8 +281,21 @@ Some disadvantages:
 
 ![](images/f_ewb.png)
 
-## This Study 
-### Implementation challenges
+## Contribution of the RCS panel design
+
+- Facilitates the **causal identification** of **unexpected events**
+  - During waves
+  - Between waves
+
+- Potential to identify interactions between
+  - Unexpected events *within* and *between* waves
+  - Unexpected events with main study hypotheses
+  
+. . .
+
+- But at what cost?
+
+## Implementation challenges
 <br>
 
 ```{r}
@@ -311,8 +324,7 @@ gt(t) |>
   fmt_number(columns = V5:V6, decimals = 2) 
 ```
 
-## This Study 
-### Implementation challenges
+## Implementation challenges
 
 <center>
 <img src="images/decisions.png" height="60%" width="60%">
