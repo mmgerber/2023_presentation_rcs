@@ -321,7 +321,12 @@ gt(t) |>
     V6 = "Large effect") |> 
   tab_spanner(label = "Power", columns = V4:V6) |> 
   tab_spanner(label = "Event", columns = V2:V3) |> 
-  fmt_number(columns = V5:V6, decimals = 2) 
+  fmt_number(columns = V5:V6, decimals = 2) |> 
+  tab_options(table.font.size = pct(110)) |> 
+  tab_style(style = list(cell_text(align = "center", v_align = "middle")),
+            locations = cells_column_labels(columns = everything())) |> 
+  tab_style(style = list(cell_text(align = "left", v_align = "bottom")),
+            locations = cells_column_labels(columns = V1))
 ```
 
 ## Implementation challenges
