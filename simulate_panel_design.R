@@ -144,10 +144,15 @@ eq_tot <- extract_eq(m_tot, use_coef = F, ital_vars = T)
 
 # swap escaped underscores for dashes
 eq_ewb <- gsub("\\\\_", "", eq_ewb)
+eq_ewb <- gsub("E1\\_\\{1\\}", "E1", eq_ewb)
 eq_ebbc <- gsub("\\\\_", "", eq_ebbc)
 eq_ebbc <- gsub("yeb23", "Y", eq_ebbc)
+eq_ebbc <- gsub("E2\\_\\{1\\}", "E2", eq_ebbc)
 eq_tot <- gsub("\\\\_", "", eq_tot)
 eq_tot <- gsub("ytot", "Y", eq_tot)
+eq_tot <- gsub("E1\\_\\{1\\}", "E1", eq_tot)
+eq_tot <- gsub("E2\\_\\{1\\}", "E2", eq_tot)
+
 
 # swap display-style $$ with inline-style $
 eq_ewb <- paste("$", as.character(eq_ewb), "$", sep = "")
