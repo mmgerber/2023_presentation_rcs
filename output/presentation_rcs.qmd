@@ -193,7 +193,7 @@ Some disadvantages:
 
 - Police work requires public support to be able to function in a democratic context
 
-- Beliefs that the police act in **procedurally just** ways and are **legitimate** facilitate compliance and cooperation with authorities
+- Beliefs that the police act in **procedurally just** ways and are **legitimate** facilitate compliance and cooperation with authorities (Jackson et al., 2012; Tyler, 2006, 2011)
 
 - A socially legitimate police force should require little violence to confront opposition
 
@@ -227,7 +227,7 @@ Some disadvantages:
 
 - **Probability-based online panel** of the population in Chile (18-65 years old)
 
-- Panel study with **10 waves**
+- Panel study with **10 waves** starting in October 2023
 
 - Face-to-face recruitment with probability-based sampling design
 
